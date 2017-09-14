@@ -1,4 +1,4 @@
 import string
 
 def is_pangram(phrase):
-    return len(set(string.ascii_lowercase) - set(phrase.lower())) == 0
+    return set(string.ascii_lowercase).issubset(set(phrase.lower()))
